@@ -1,5 +1,10 @@
 # Tests
 
+The desktop JNI exception regression requires a JDK (`JAVA_HOME`):
+`cargo test --manifest-path tests/jni-bridge/Cargo.toml`. It compiles the actual
+JNI bridge without desktop Tauri/WebView dependencies, invokes a throwing Java method and
+checks that the USB bridge returns the error with no pending Java exception.
+
 ## Trust matrix
 
 | Layer | What it proves | Where | CI job |
